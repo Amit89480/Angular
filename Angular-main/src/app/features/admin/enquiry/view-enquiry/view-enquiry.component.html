@@ -1,0 +1,19 @@
+<h1>Users Feedback</h1>
+ <table border="2" width="100%">
+     <thead>
+         <tr>
+             <th>Sl no.</th>
+             <th>Name</th>
+             <th>Email</th>
+             <th>Message</th>
+         </tr>
+     </thead>
+ 
+     <tbody>
+         <tr *ngFor="let enquiry of enquiryData; let i=index">
+             <td>{{i+1}}</td>
+             <td>{{enquiry.name}}</td>
+             <td>{{enquiry.email}}</td>
+             <td>{{enquiry.message}}</td>
+     </tbody>
+ </table>

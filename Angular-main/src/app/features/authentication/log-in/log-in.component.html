@@ -1,0 +1,16 @@
+<div>
+    <img src="https://source.unsplash.com/random/?trains" alt="" class="img">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="">Email : </label>
+            <input type="email" formControlName="email">
+        </div>
+        <div>
+            <label for="">Password : </label>
+            <input type="password" formControlName="password">
+        </div>
+        <div>
+            <button type="submit" [disabled]="loginForm.invalid">login</button>
+        </div>
+    </form>
+</div>

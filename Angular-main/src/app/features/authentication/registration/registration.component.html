@@ -1,0 +1,48 @@
+<div>
+    <img src="https://source.unsplash.com/random/?trains" alt="" class="img">
+    <form [formGroup]="userFrom" (ngSubmit)="saveData()">
+        <div class="name">
+            <label for="name">Name</label>
+            <input type="text" formControlName="name">
+
+        </div>
+        <br>
+
+        <div class="email">
+            <label for="email">Email</label>
+            <input type="text" formControlName="email">
+
+        </div>
+        <br>
+        <div class="phone">
+            <label for="phone">Phone</label>
+            <input type="text" formControlName="phone">
+
+        </div>
+        <br>
+        <div class="address">
+            <label for="address">Address</label>
+            <textarea rows="2.5" formControlName="address"></textarea>
+
+        </div>
+        <br>
+        <div class="gender">
+            <label for="gender">Gender</label>
+            <select id="gender">              
+            <option value>Male</option>
+            <option value>Female</option>
+            <option value>Transgender</option>
+          </select>
+            <input type="text" formControlName="gender">
+
+        </div>
+        <br>
+        <div class="dob">
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob" formControlName="dob">
+        </div>
+        <br>
+        <button type="submit" [disabled]="userFrom.invalid">Save</button>
+
+    </form>
+</div>

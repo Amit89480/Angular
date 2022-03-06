@@ -1,0 +1,38 @@
+<div>
+  <form [formGroup]="trainForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="">Name</label>
+      <input class="form-group" type="text" formControlName="name">
+    </div>
+    <div>
+      <label for="">Number</label>
+      <input class="form-group" type="text" formControlName="number">
+    </div>
+    <div>
+      <label for="">Source</label>
+      <input class="form-group" type="text" formControlName="source">
+    </div>
+    <div>
+      <label for="">Destination</label>
+      <input class="form-group" type="text" formControlName="destination">
+    </div>
+    <div>
+      <label for="">Depature Time</label>
+      <input class="form-group" type="time" formControlName="depature_time">
+    </div>
+    <div>
+      <label for="">Price</label>
+      <input class="form-group" type="number" formControlName="price">
+    </div>
+    <div>
+      <label for="">Status</label>
+      <select formControlName="status" class="form-group">
+        <option value="1">Active</option>
+        <option value="0">Inactive</option>
+      </select>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+  </form>
+</div>

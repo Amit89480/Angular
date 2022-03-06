@@ -1,0 +1,26 @@
+<header>
+    <img src="https://source.unsplash.com/random/?trains" alt="" class="img">
+    <div class="parallax">
+        <div class="page-title">Railway Reservation</div>
+        <div class="menu" id="sticky">
+            <ul class="menu-ul">
+                <a routerLink="" class="a-menu">Home</a>
+                <!-- <a routerLink="" class="a-menu">Places</a> -->
+                <a routerLink="contact" class="a-menu">ContactUs</a>
+                <a routerLink="about" class="a-menu">AboutUs</a>
+                <div *ngIf="user.type != 'user' || !user ">
+                    <a routerLink="/auth/login" class="a-menu">Login</a>
+                    <a routerLink="/auth/register" class="a-menu">Register</a>
+                </div>
+                <div *ngIf="user.type == 'user'">
+                    <a routerLink="profile" class="a-menu">Profile</a>
+                    <a routerLink="" (click)="logout()" class="a-menu">Logout</a>
+                </div>
+            </ul>
+            <!-- <div>
+             <button type="search">Search</button>
+         </div> -->
+
+
+        </div>
+    </div>

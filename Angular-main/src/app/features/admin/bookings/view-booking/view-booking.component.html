@@ -1,0 +1,30 @@
+<div>
+    <table class="table tabke-responsive">
+        <thead>
+            <tr>
+                <th>SL NO.</th>
+                <th>User ID</th>
+                <th>Train ID</th>
+                <th>Depature Date</th>
+                <th>Depature Time</th>
+                <th>Payment Mode</th>
+                <th>Price</th>
+                <th>PNR No</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let r of bookings; let i=index;">
+                <td>{{ i+1 }}</td>
+                <td>{{r.uid}}</td>
+                <td>{{r.tid}}</td>
+                <td>{{r.depature_date}}</td>
+                <td>{{r.depature_time}}</td>
+                <td>{{r.payment_mode}}</td>
+                <td>{{r.price}}</td>
+                <td>{{r.pnr_no}}</td>
+                <td>{{r.status == 1 ? 'Payment Complete' : 'Payment Pending'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

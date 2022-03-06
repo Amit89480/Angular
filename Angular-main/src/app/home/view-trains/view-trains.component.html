@@ -1,0 +1,31 @@
+<div *ngIf="trains.length">
+  <div class="">
+    <h3>Source: {{ source }}</h3>
+    <h3>Destination: {{ destination }}</h3>
+  </div>
+  <table class="table table-responsive">
+    <thead>
+      <tr>
+        <th>SL</th>
+        <th>Train Name</th>
+        <th>Train Number</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let train of trains; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ train.name }}</td>
+        <td>{{ train.number }}</td>
+        <td>{{ train.price }}</td>
+        <td>
+          <button class="btn btn-primary" routerLink="/booking/{{train.id}}">Book</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="trains.length == 0">
+  <h1>Opps! No train Found...</h1>
+</div>

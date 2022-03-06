@@ -1,0 +1,33 @@
+<div>
+  <button class="btn btn-primary" routerLink="add-train">Add Train</button>
+</div>
+<div>
+  <table class="table table-responsive">
+    <thead>
+      <tr>
+        <th>SL</th>
+        <th>Name</th>
+        <th>Number</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let train of trains; let i = index;">
+        <td>{{ i+1 }}</td>
+        <td>{{train.name}}</td>
+        <td>{{train.number}}</td>
+        <td>{{train.source}}</td>
+        <td>{{train.destination}}</td>
+        <td>Rs.{{train.price}}/-</td>
+        <td>{{train.status ==1 ? 'Active': 'Inactive'}}</td>
+        <td>
+          <button type="button" class="btn btn-sm btn-secondary" routerLink="edit-train/{{train.id}}">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

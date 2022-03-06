@@ -1,0 +1,54 @@
+            .img {
+                position: absolute;
+                z-index: -1;
+                width: 100rem;
+            }
+            
+            .name {
+                border: 2pxsolid black;
+                margin: 2px 3px;
+                padding: 2px 4px;
+            }
+            
+            .email {
+                border: 2pxsolid black;
+                margin: 2px 3px;
+                padding: 2px 4px;
+            }
+            
+            .phone {
+                border: 2pxsolid black;
+                margin: 2px 3px;
+                padding: 2px 4px;
+            }
+            
+            .address {
+                border: 2pxsolid black;
+                margin: 2px 3px;
+                padding: 2px 4px;
+            }
+            
+            .gender {
+                border: 2pxsolid black;
+                margin: 2px 3px;
+                padding: 2px 4px;
+            }
+            
+            .dob {
+                border: 2pxsolid black;
+                margin: 2px 3px;
+                padding: 2px 4px;
+            }
+            
+            button:hover {
+                color: red;
+                /* padding: 5px 7px;
+        margin: 9px 7px; */
+                cursor: pointer;
+            }
+            
+            button {
+                padding: 5px 7px;
+                margin: 9px 7px;
+                border: 2px solid black;
+            }

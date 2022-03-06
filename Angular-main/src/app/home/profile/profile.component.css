@@ -1,0 +1,113 @@
+.heading {
+    color: rgb(119, 42, 42);
+    font-weight: bold;
+    width: fit-content;
+    height: fit-content;
+    font-size: 22px;
+    background-color: #0b2f41;
+    text-align: center;
+    padding: 10px;
+    margin-left: 3%;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+hr {
+    width: 83%;
+    margin: 20px auto;
+    color: grey;
+}
+
+.power {
+    margin-top: 10px;
+    margin-left: 3%;
+    width: 94%;
+    display: flex;
+    padding-bottom: 15px;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.power:last-child {
+    border-bottom: none;
+}
+
+.power-section,
+.leader-section,
+.trophies-section,
+.points-section,
+.info-section {
+    background-color: white;
+    margin: auto;
+    width: 83%;
+    padding: 1%;
+}
+
+.rank {
+    margin-left: 3%;
+}
+
+.gallery {
+    margin-left: 3%;
+    display: grid;
+    grid-template-rows: 80px 80px;
+    grid-template-columns: repeat(12, 80px);
+    gap: 5px;
+}
+
+.gallery img {
+    width: 80px;
+    height: 80px;
+}
+
+.points {
+    margin-left: 3%;
+    margin-bottom: 10px;
+}
+
+.points-section hr {
+    margin-top: 10px;
+    color: grey;
+    width: 94%;
+}
+
+.info-section {
+    display: flex;
+}
+
+.picture {
+    position: relative;
+    width: 300px;
+    text-align: center;
+}
+
+.picture::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 262px;
+    background-color: #ddd;
+    right: -10px;
+    top: -13px;
+}
+
+.picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: 2%;
+    margin-bottom: 5px;
+    box-shadow: 0 0 10px 7px #ddd;
+    object-fit: cover;
+}
+
+.description {
+    margin-left: 20px;
+    position: relative;
+}
+
+#num-of-days {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+}

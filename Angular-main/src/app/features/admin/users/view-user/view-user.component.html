@@ -1,0 +1,26 @@
+<h1>Registered Users</h1>
+<table border="2" width="100%">
+    <thead>
+        <tr>
+            <th>Sl no.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>Dob</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let users of usersData; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{users.name}}</td>
+            <td>{{users.email}}</td>
+            <td>{{users.phone}}</td>
+            <td>{{users.address}}</td>
+            <td>{{users.gender}}</td>
+            <td>{{users.dob}}</td>
+        </tr>
+    </tbody>
+</table>

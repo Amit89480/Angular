@@ -1,0 +1,72 @@
+<!-- <section class="contact">
+    <div class="content">
+        <h2>Contact Us</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum atque enim sapiente aut, excepturi optio ea
+            rerum ipsa facere officia aspernatur molestiae quasi magni, quam deserunt et cumque, exercitationem in id
+            perferendis itaque aliquam expedita illum. Cumque, asperiores odit voluptatum modi eius ex? Quas porro
+            reprehenderit fugiat ea odio natus?</p>
+    </div>
+    <div class="container1">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="text">
+                    <h3>Address</h3>
+                    <p>office address</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="text">
+                    <h3>Email</h3>
+                    <p>onlinebus@gmail.com</p>
+  </div>
+            </div>
+            <div class="box">
+                <div class="text">
+                    <h3>Phone</h3>
+                    <p>1234567890</p>
+                </div>
+            </div>
+        </div>
+        <div class="contactForm">
+            <form>
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                    <span>Full Name</span>
+  <input type="text" name="" required="required">
+                </div>
+                <div class="inputBox">
+                    <span>Email</span>
+                    <input type="text" name="" required="required">
+                </div>
+                <div class="inputBox">
+                    <span>Type your message</span>
+                    <textarea required="required"></textarea>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" name="" value="send">
+                </div>
+            </form>
+        </div>
+    </div>
+</section> -->
+
+
+<h1>Send Message</h1>
+
+    <form [formGroup]="user" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" formControlName="name" required="required">
+            </div>
+            <div>
+            <label for="email">Email</label>
+            <input type="email" formControlName="email" required="required">
+        </div>
+        <div>
+            <label for="phone">message</label>
+            <input type="text" formControlName="message" required="required">
+            <button type="submit">Submit</button>
+        </div>
+        
+    </form>
+    <hr>

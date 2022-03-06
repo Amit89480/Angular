@@ -1,0 +1,28 @@
+{
+    "rules": {
+        "users": {
+            ".read": true,
+            ".write": true
+        },
+        "trains": {
+            ".read": true,
+            ".write": true
+        },
+        "enquiries": {
+            ".read": true,
+            ".write": true
+        },
+        "payments": {
+            ".read": true,
+            ".write": true,
+        },
+        "reservations": {
+            ".read": true,
+            ".write": true
+        },
+        "xx": {
+            ".read": true,
+            ".write": true
+        }
+    }
+}

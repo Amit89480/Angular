@@ -1,0 +1,115 @@
+<div class="info-section">
+    <div class="picture">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/1024px-User-avatar.svg.png" alt="">
+        <meter id="level" min="0" max="100" value="100" style="width: 260px; height: 40px;"></meter>
+    </div>
+    <div class="description">
+        <h1>{{userDetails.name}}</h1>
+        <p>Email: {{userDetails.email}}</p>
+        <p>Phone" {{userDetails.phone}}</p>
+        <p>Address: {{userDetails.address}}</p>
+    </div>
+</div>
+<hr>
+<div class="points-section my-2">
+    <div class="heading">Tickets</div>
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th>SL</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Train No</th>
+                <th>Train Name</th>
+                <th>PNR Number</th>
+                <th>Depature Date</th>
+                <th>Depature Time</th>
+                <th>Booking Date</th>
+                <th>Status</th>
+                <!-- <th>Action</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let b of bookings; let i = index;">
+                <td>{{ i+1 }}</td>
+                <td>{{ getTrain(b.tid).source }}</td>
+                <td>{{ getTrain(b.tid).destination }}</td>
+                <td>{{ getTrain(b.tid).number }}</td>
+                <td>{{ getTrain(b.tid).name }}</td>
+                <td>{{ b.pnr_no }}</td>
+                <td>{{ b.depature_date }}</td>
+                <td>{{ b.depature_time }}</td>
+                <td>{{ b.datetime | date: 'short' }}</td>
+                <td>{{ b.status == 1 ? 'Payment Complete' : 'Payment Not complete' }}</td>
+                <!-- <td>
+                    <button *ngIf="b.status == 1" class="btn btn-sm btn-success" (click)="print()">Print Ticket</button>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="d-none">
+	<div id="main">
+		<div class="ticket-main">
+			<div class="ticket-top">
+			</div>
+
+			<div class="ticket-middle">
+
+				<div class="middle-row middle-1">
+					<span class="ticket-label middle-class">Class</span>
+					<span class="ticket-label middle-type">Ticket Type</span>
+					<span class="ticket-label middle-adult">Adult</span>
+					<span class="ticket-label middle-child">Child</span>
+				</div>
+					<div class="middle-row middle-1-1">
+					<span class="ticket-detail-large middle-class">STD</span>
+					<span class="ticket-detail middle-type">Anytime Day R</span>
+					<span class="ticket-detail middle-adult">One</span>
+					<span class="ticket-detail middle-child">Nil</span>
+					<span class="ticket-detail-large middle-rtn">RTN</span>
+				</div>
+				<div class="middle-row middle-2">
+					<span class="middle-railcard-spacer"></span>
+					<span class="ticket-label middle-startdate">Start Date</span>
+					<span class="ticket-label middle-number">Number</span>
+				</div>
+				<div class="middle-row middle-2-2">
+					<span class="ticket-detail-large middle-railcard-spacer">16-25</span>
+					<span class="ticket-detail middle-startdate">23&middot;MCH&middot;16</span>
+					<span class="ticket-detail middle-number">01234</span>
+					<span class="ticket-detail middle-longnumber">0123456789</span>
+				</div>
+				<div class="middle-row middle-3">
+					<span class="ticket-label middle-from">From</span>
+					<span class="ticket-label middle-valid">Valid Until</span>
+					<span class="ticket-label middle-price">Price</span>
+				</div>
+				<div class="middle-row middle-3-3">
+					<span class="ticket-detail middle-from">Tamworth *</span>
+					<span class="ticket-detail middle-valid">23&middot;MCH&middot;16</span>
+					<span class="ticket-detail middle-price">£5.30X</span>
+				</div>
+				<div class="middle-row middle-4">
+					<span class="ticket-label middle-to">To</span>
+					<span class="ticket-label middle-route">Route</span>
+					<span class="ticket-label middle-validity">Validity</span>
+				</div>
+				<div class="middle-row middle-4-4">
+					<span class="ticket-detail middle-to">Birmingham Stns</span>
+					<span class="ticket-detail-small middle-route">Any Permitted</span>
+					<span class="ticket-detail-small middle-validity">On Date Shown</span>
+				</div>
+			</div>
+
+			<div class="ticket-bottom">
+				<div class="ticket-logo-2-container">
+					<div class="ticket-logo"></div>
+				</div>
+				<div class="ticket-printed">
+					<span class="ticket-label">Printed 09:48 on 23-MCH-16</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
